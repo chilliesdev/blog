@@ -1,7 +1,8 @@
 import * as React from 'react'
 
+import SearchBar from './SearchBar'
+
 import StyledHeader from '../styles/StyledHeader'
-import HeaderInner from '../styles/HeaderInner'
 import HomepageLink from '../styles/HomepageLink'
 
 interface HeaderProps {
@@ -10,9 +11,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => (
   <StyledHeader>
-    <HeaderInner>
-      <HomepageLink to="/">{title}</HomepageLink>
-    </HeaderInner>
+    <HomepageLink to="/">{title}</HomepageLink>
+    <SearchBar />
   </StyledHeader>
 )
 

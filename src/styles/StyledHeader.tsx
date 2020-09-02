@@ -8,4 +8,7 @@ export default styled.header`
   padding: 0 ${dimensions.containerPadding}rem;
   background-color: ${colors.brand};
   color: ${transparentize(0.5, colors.white)};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `

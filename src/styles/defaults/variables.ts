@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 
 export const colors = {
-  brand: '#663399',
+  brand: '#011627',
   lilac: '#9d7cbf',
-  accent: '#ffb238',
+  accent: '#E71D36',
   success: '#37b635',
   warning: '#ec1818',
   ui: {
@@ -17,7 +17,7 @@ export const colors = {
     copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
     calm: 'rgba(0, 0, 0, 0.54)'
   },
-  white: '#fff',
+  white: '#FDFFFC',
   black: '#000'
 }
 
@@ -25,7 +25,8 @@ export const fonts = {
   sansSerif:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
   serif: 'Georgia, "Times New Roman", Times, serif',
-  monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
+  monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace',
+  montserrat: '"Montserrat", sans-serif'
 }
 
 export const breakpoints = {
@@ -37,7 +38,7 @@ export const breakpoints = {
 }
 
 export const widths = {
-  md: 720,
+  md: 768,
   lg: 960,
   xl: 1140
 }
