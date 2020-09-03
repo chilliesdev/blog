@@ -13,15 +13,15 @@ export default `
   }
 
   html {
-    font-size: ${dimensions.fontSize.regular}px !important;
-    line-height: ${dimensions.lineHeight.regular} !important;
+    font-size: ${dimensions.fontSize.regular}px;
+    line-height: ${dimensions.lineHeight.regular};
   }
 
   body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: ${fonts.montserrat};
+    font-family: ${fonts.monospace};
     color: ${colors.black};
     background-color: ${colors.white};
     -webkit-text-size-adjust: 100%;

@@ -1,3 +1,9 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
+console.log(process.env.CONTENTFUL_SPACE_ID)
+
 module.exports = {
   siteMetadata: {
     title: `blog`,
@@ -11,6 +17,13 @@ module.exports = {
     }
   },
   plugins: [
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
+    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

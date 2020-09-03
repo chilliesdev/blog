@@ -1,18 +1,17 @@
 import * as React from 'react'
 
 import SearchBar from './SearchBar'
+import Logo from './Logo'
+import Container from './Container'
 
 import StyledHeader from '../styles/StyledHeader'
-import HomepageLink from '../styles/HomepageLink'
 
-interface HeaderProps {
-  title: string
-}
-
-const Header: React.FC<HeaderProps> = ({ title }) => (
+const Header: React.FC = () => (
   <StyledHeader>
-    <HomepageLink to="/">{title}</HomepageLink>
-    <SearchBar />
+    <Container className="container">
+      <Logo />
+      <SearchBar />
+    </Container>
   </StyledHeader>
 )
 

@@ -45,7 +45,7 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
-    regular: 16,
+    regular: 14,
     large: 18
   },
   headingSizes: {
@@ -62,5 +62,6 @@ export const dimensions = {
 }
 
 export const heights = {
-  header: 60
+  header: 60,
+  footer: 151
 }

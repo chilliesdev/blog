@@ -6,6 +6,7 @@ import 'modern-normalize'
 import '../styles/defaults/normalize'
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 
@@ -40,8 +41,9 @@ const IndexLayout: React.FC = ({ children }) => (
             { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
         />
-        <Header title={data.site.siteMetadata.title} />
+        <Header />
         <LayoutMain>{children}</LayoutMain>
+        <Footer />
       </LayoutRoot>
     )}
   />

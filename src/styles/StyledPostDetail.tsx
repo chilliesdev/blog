@@ -1,10 +1,8 @@
 import styled from '@emotion/styled'
 import { colors } from './defaults/variables'
 
-export default styled.span`
+export default styled.div`
   color: ${colors.accent};
-  position: relative;
-  font-size: 1.4rem;
-  right: 1rem;
-  top: 0.3rem;
+  display: inline;
+  margin-right: 3rem;
 `
