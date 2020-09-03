@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export default styled.img`
-  /* width: 100%; */
+  width: 100%;
+  height: 100%;
   display: block;
-  margin: 1rem 0;
 `

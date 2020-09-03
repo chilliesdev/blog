@@ -9,21 +9,32 @@ import PostLine from '../styles/PostLine'
 import PostDetail from './PostDetail'
 import PostText from '../styles/PostText'
 import PostImage from '../styles/PostImage'
+import PostImageWrapper from '../styles/PostImageWrapper'
+import PostImageCaption from '../styles/PostImageCaption'
 
-const PostList: React.FC = () => {
+interface PostListProps {
+  title: string
+  preview: string
+  slug: string
+  image: string
+}
+
+const PostList: React.FC<PostListProps> = ({ title, preview, slug, image }) => {
   return (
     <StyledPostList>
-      <PostText>
-        <PostCategory>Category</PostCategory>
-        <PostTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </PostTitle>
-        <PostPreview>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </PostPreview>
-        <ReadmoreLink to="/post">Read More</ReadmoreLink>
-        <PostLine />
-        <PostDetail />
-      </PostText>
-      <PostImage src="https://picsum.photos/200" />
+      <PostCategory>Category</PostCategory>
+      <PostTitle>{title}</PostTitle>
+      <PostPreview>{preview}</PostPreview>
+      <ReadmoreLink to={`/${slug}`}>Read More</ReadmoreLink>
+      <PostLine />
+      <PostDetail />
+      <PostImageWrapper>
+        <PostImage src={image} />
+        <PostImageCaption>
+          <PostCategory caption>Category</PostCategory>
+          <PostTitle caption>{title}</PostTitle>
+        </PostImageCaption>
+      </PostImageWrapper>
     </StyledPostList>
   )
 }

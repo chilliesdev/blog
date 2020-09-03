@@ -12,5 +12,6 @@ export default styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.5rem;
   }
 `

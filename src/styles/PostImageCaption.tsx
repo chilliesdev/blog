@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
-import { colors, breakpoints } from './defaults/variables'
+import { breakpoints } from './defaults/variables'
 
 export default styled.div`
-  color: ${colors.white};
-  opacity: 0.5;
+  position: absolute;
+  bottom: 13rem;
+  display: none;
 
   @media screen and (max-width: ${breakpoints.sm}px) {
-    grid-row: 3/3;
+    display: block;
   }
 `

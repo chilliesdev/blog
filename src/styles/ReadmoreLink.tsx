@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { colors } from './defaults/variables'
+import { colors, breakpoints } from './defaults/variables'
 
 export default styled(Link)`
   text-transform: uppercase;
@@ -14,5 +14,9 @@ export default styled(Link)`
     letter-spacing: 5px;
     opacity: 0.8;
     font-weight: bold;
+  }
+
+  @media screen and (max-width: ${breakpoints.sm}px) {
+    padding: 0 1rem;
   }
 `

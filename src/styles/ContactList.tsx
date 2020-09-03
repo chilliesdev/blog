@@ -5,4 +5,5 @@ export default styled.li`
   color: ${colors.white};
   list-style: none;
   display: flex;
+  margin: 1rem 0;
 `
