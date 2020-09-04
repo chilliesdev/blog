@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { heights, colors } from './defaults/variables'
+import { heights, colors, breakpoints } from './defaults/variables'
 
 export default styled.header`
   background-color: ${colors.brand};
@@ -12,6 +12,9 @@ export default styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem;
+
+    @media screen and (max-width: ${breakpoints.sm}px) {
+      padding: 0 1.5rem;
+    }
   }
 `

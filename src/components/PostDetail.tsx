@@ -14,14 +14,20 @@ const PostDetails: React.FC<{ icon: React.ReactNode }> = ({ icon, children }) =>
   </StyledPostDetail>
 )
 
-const Details: React.FC = () => {
+interface DetailsProps {
+  readTime: string
+  publishDate: string
+  fromPost?: boolean
+}
+
+const Details: React.FC<DetailsProps> = ({ readTime, publishDate, fromPost }) => {
   const details: { icon: React.ReactNode; text: string }[] = [
-    { icon: <BiTimer />, text: '3mins read' },
-    { icon: <MdDateRange />, text: '5days ago' }
+    { icon: <BiTimer />, text: readTime },
+    { icon: <MdDateRange />, text: publishDate }
   ]
 
   return (
-    <PostDetailWrapper>
+    <PostDetailWrapper fromPost={fromPost}>
       {details.map(({ icon, text }) => (
         <PostDetails icon={icon} key={text}>
           {text}

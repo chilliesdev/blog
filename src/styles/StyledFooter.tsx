@@ -6,7 +6,6 @@ export default styled.footer`
   height: ${heights.footer}px;
 
   .container {
-    padding: 0 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -20,8 +19,12 @@ export default styled.footer`
   @media screen and (max-width: ${breakpoints.sm}px) {
     height: 300px;
 
-    a {
-      grid-column: initial;
+    .container {
+      padding: 0 1.5rem;
+
+      a {
+        grid-column: initial;
+      }
     }
   }
 `

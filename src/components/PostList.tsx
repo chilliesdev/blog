@@ -7,27 +7,31 @@ import PostPreview from '../styles/PostPreview'
 import ReadmoreLink from '../styles/ReadmoreLink'
 import PostLine from '../styles/PostLine'
 import PostDetail from './PostDetail'
-import PostText from '../styles/PostText'
 import PostImage from '../styles/PostImage'
 import PostImageWrapper from '../styles/PostImageWrapper'
 import PostImageCaption from '../styles/PostImageCaption'
 
 interface PostListProps {
   title: string
-  preview: string
+  preview: React.ReactNode
   slug: string
   image: string
+  category: string
+  details: {
+    readTime: string
+    publishedDate: string
+  }
 }
 
-const PostList: React.FC<PostListProps> = ({ title, preview, slug, image }) => {
+const PostList: React.FC<PostListProps> = ({ title, preview, slug, image, category, details: { readTime, publishedDate } }) => {
   return (
     <StyledPostList>
-      <PostCategory>Category</PostCategory>
+      <PostCategory>{category}</PostCategory>
       <PostTitle>{title}</PostTitle>
       <PostPreview>{preview}</PostPreview>
       <ReadmoreLink to={`/${slug}`}>Read More</ReadmoreLink>
       <PostLine />
-      <PostDetail />
+      <PostDetail readTime={readTime} publishDate={publishedDate} />
       <PostImageWrapper>
         <PostImage src={image} />
         <PostImageCaption>

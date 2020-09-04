@@ -4,6 +4,7 @@ import { setCaption } from './defaults/mixins'
 
 interface StyleProps {
   caption?: boolean
+  fromPost?: boolean
 }
 
 export default styled.p<StyleProps>`
@@ -14,5 +15,7 @@ export default styled.p<StyleProps>`
 
   @media screen and (max-width: ${breakpoints.sm}px) {
     ${props => setCaption(props.caption)}
+
+    display: ${({ fromPost }) => fromPost && 'block'}
   }
 `

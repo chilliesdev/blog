@@ -4,9 +4,10 @@ import { setCaption } from './defaults/mixins'
 
 interface StyleProps {
   caption?: boolean
+  fromPost?: boolean
 }
 
-export default styled.h2<StyleProps>`
+export default styled.h1<StyleProps>`
   /* text-transform: uppercase; */
   font-weight: bold;
   color: ${colors.brand};
@@ -18,5 +19,7 @@ export default styled.h2<StyleProps>`
     font-size: 22px;
     line-height: 30px;
     ${setCaption(props.caption)}`}
+
+    display: ${({ fromPost }) => fromPost && 'block'}
   }
 `
